@@ -5,31 +5,31 @@ const FeaturedGallery = () => {
     { 
       name: "Templo de San Ignacio", 
       type: "Arquitectura Jesuítica",
-      image: "https://images.unsplash.com/photo-1548625361-155de8c1c2ae?auto=format&fit=crop&w=600&q=80" // Barroco / Iglesia antigua
+      image: "https://images.unsplash.com/photo-1590075865003-e48277faa558?auto=format&fit=crop&w=600&q=80" // Fachada colonial/barroca e institucional
     },
     { 
       name: "Museo Diocesano", 
       type: "Arte Sacro Jesuítico",
-      image: "https://images.unsplash.com/photo-1601887389937-0b02c26b6c3c?auto=format&fit=crop&w=600&q=80" // Escultura / Museo antiguo
+      image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=80" // Arte/imaginería barroca detallada
     },
     { 
       name: "Tañarandy", 
       type: "Tradición Cultural",
-      image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=600&q=80" // Velas / Misticismo nocturno
+      image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=600&q=80" // Misticismo nocturno cálido iluminado por fuego/velas
     },
     { 
       name: "Plaza de Armas", 
       type: "Espacio Público",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" // Plaza / Entorno verde cálido
+      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" // Naturaleza, árboles centenarios y entorno verde
     }
   ]
 
   return (
     <Section bgColor="white" className="py-20 bg-white">
-      {/* Cabecera de la sección estilo editorial */}
+      
       <div className="text-center mb-16">
         <span className="text-xs font-semibold tracking-[0.2em] text-amber-800 uppercase block mb-3">
-          Lugares emblemáticos
+          Lugares a visitar
         </span>
         <h2 className="text-3xl md:text-4xl font-serif text-stone-900 font-normal tracking-tight">
           Puntos de interés
@@ -44,11 +44,11 @@ const FeaturedGallery = () => {
             key={index} 
             className="group relative h-[380px] rounded-2xl overflow-hidden border border-stone-100 bg-stone-50 shadow-sm flex flex-col justify-end"
           >
-            {/* Imagen de fondo */}
+            {/* Imagen de fondo con animación de escala */}
             <img 
               src={place.image} 
               alt={place.name}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 brightness-[0.85] group-hover:brightness-[0.75]" 
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out scale-100 group-hover:scale-105 brightness-[0.85] group-hover:brightness-[0.75]" 
               loading="lazy"
             />
 
@@ -64,7 +64,7 @@ const FeaturedGallery = () => {
                 {place.name}
               </h3>
               
-              {/* Línea decorativa sutil que aparece suavemente con el hover */}
+              {/* Línea decorativa sutil al hacer hover */}
               <div className="w-0 h-[1px] bg-amber-400/60 mt-3 transition-all duration-500 group-hover:w-16" />
             </div>
           </div>
