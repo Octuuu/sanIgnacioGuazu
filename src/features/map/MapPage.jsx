@@ -26,7 +26,9 @@ const MapPage = () => {
           {/* Nota al pie informativa */}
           <div className="mt-8 max-w-2xl mx-auto text-center">
             <p className="text-stone-400 font-light text-xs leading-relaxed">
-              El mapa indexa los monumentos históricos de la antigua reducción de San Ignacio Guazú fundada en 1609. Utiliza el panel lateral para centrar la visual directamente en los complejos culturales o trazar rutas de navegación en tiempo real.
+              Fundada en 1609 como la primera reducción jesuítica de las misiones, San Ignacio Guazú es el origen de una historia fascinante en América del Sur.
+
+              Nuestra ciudad custodia el legado del encuentro entre el pueblo guaraní y los padres jesuitas. Aquí, el misticismo, la tierra roja y la tradición viva confluyen en una experiencia única tallada en arte, fe y memoria.
             </p>
           </div>
 
