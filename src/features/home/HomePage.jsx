@@ -39,17 +39,19 @@ const HomePage = () => {
             <img 
               src={iglesiaSanig} 
               alt="Historia Viva" 
-              className="absolute inset-0 w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out brightness-[0.70] group-hover:brightness-[0.65]"
+              className="absolute inset-0 w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out brightness-[0.80] group-hover:brightness-[0.75]"
             />
             {/* Gradiente de Legibilidad */}
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent" />
             
             {/* Contenido */}
             <div className="relative z-10 w-full">
-              <div className="w-9 h-9 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-amber-400 mb-5 border border-white/10">
+              <h3 className="text-2xl font-serif text-white flex mb-3 tracking-wide font-normal">Historia Viva
+
+                <div className="w-9 h-9 flex  items-center justify-center text-amber-400">
                 <History className="h-4 w-4" />
               </div>
-              <h3 className="text-2xl font-serif text-white mb-3 tracking-wide font-normal">Historia Viva</h3>
+              </h3>
               <p className="text-stone-300 font-light text-xs md:text-sm leading-relaxed mb-6">
                 Conoce el legado de la primera reducción jesuítica, su arte sacro tallado en madera y las raíces del misticismo en América del Sur.
               </p>
@@ -67,17 +69,20 @@ const HomePage = () => {
             <img 
               src={Fuego} 
               alt="Tañarandy Místico" 
-              className="absolute inset-0 w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-1000 ease-outbrightness-[0.8] group-hover:brightness-[0.4]"
+              className="absolute inset-0 w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out brightness-[0.70] group-hover:brightness-[0.65]"
             />
             {/* Gradiente Ígneo para Tañarandy */}
-            <div className="absolute inset-0 bg-gradient-to-t from-amber-950 via-amber-950/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent" />
             
             {/* Contenido */}
             <div className="relative z-10 w-full">
-              <div className="w-9 h-9 rounded-xl bg-amber-500/20 backdrop-blur-md flex items-center justify-center text-amber-300 mb-5 border border-amber-400/20">
-                <Sparkles className="h-4 w-4" />
-              </div>
-              <h3 className="text-2xl font-serif text-white mb-3 tracking-wide font-normal">Tañarandy Místico</h3>
+              
+              <h3 className="text-2xl font-serif text-white mb-3 tracking-wide font-normal flex">Tañarandy Místico
+
+                <div className="w-9 h-9 flex items-center justify-center text-amber-300">
+                  <Sparkles className="h-4 w-4" />
+                </div>
+              </h3>
               <p className="text-amber-100/80 font-light text-xs md:text-sm leading-relaxed mb-6">
                 Siente la espiritualidad en la mítica tierra de los candiles de apepú, una tradición viva que ilumina con fuego la cultura ignaciana.
               </p>
@@ -89,23 +94,26 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* Tarjeta 3: Gastronomía Local */}
+          {/* gastronomía Local */}
           <div className="group relative h-[460px] rounded-2xl overflow-hidden border border-stone-200/40 bg-stone-900 flex flex-col justify-end p-8 transition-all duration-500 hover:shadow-xl hover:shadow-stone-950/10">
             {/* Imagen Real de Fondo */}
             <img 
               src={Restaurant} 
               alt="Gastronomía" 
-              className="absolute inset-0 w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out brightness-[0.55] group-hover:brightness-[0.45]"
+              className="absolute inset-0 w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out brightness-[0.75] group-hover:brightness-[0.65]"
             />
             {/* Gradiente de Legibilidad */}
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent" />
             
             {/* Contenido */}
             <div className="relative z-10 w-full">
-              <div className="w-9 h-9 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-amber-400 mb-5 border border-white/10">
-                <Utensils className="h-4 w-4" />
-              </div>
-              <h3 className="text-2xl font-serif text-white mb-3 tracking-wide font-normal">Gastronomía</h3>
+              
+              <h3 className="text-2xl font-serif text-white mb-3 tracking-wide font-normal flex">Gastronomía
+
+                <div className="w-9 h-9 flex items-center justify-center text-amber-400 ">
+                  <Utensils className="h-4 w-4" />
+                </div>
+              </h3>
               <p className="text-stone-300 font-light text-xs md:text-sm leading-relaxed mb-6">
                 Disfruta de los sabores tradicionales de las misiones y las propuestas gastronómicas que reflejan nuestra hospitalidad guaraní.
               </p>
