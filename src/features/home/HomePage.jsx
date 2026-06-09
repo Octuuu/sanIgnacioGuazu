@@ -115,7 +115,7 @@ const HomePage = () => {
                 </div>
               </h3>
               <p className="text-stone-300 font-light text-xs md:text-sm leading-relaxed mb-6">
-                Disfruta de los sabores tradicionales de las misiones y las propuestas gastronómicas que reflejan nuestra hospitalidad guaraní.
+                Disfruta de los sabores tradicionales de las misiones y las propuestas gastronómicas que reflejan nuestra hospitalidad.
               </p>
               <Link to="/gastronomia" className="focus:outline-none focus:ring-0">
                 <Button variant="outline" className="w-full !bg-white/5 !text-white hover:!bg-white/20 !border-white/20 transition-all duration-300">

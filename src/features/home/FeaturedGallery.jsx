@@ -1,21 +1,24 @@
 import Section from '../../components/ui/Section'
+import TemploSanig from '../../assets/images/hero/iglesia-sanig-noche.webp'
+import MuseDiocesano from '../../assets/images/hero/museoDiocesano.png'
+import Taniarandy from '../../assets/images/tañarandy/fondoTaniarandy.jpeg'
 
 const FeaturedGallery = () => {
   const places = [
     { 
       name: "Templo de San Ignacio", 
       type: "Arquitectura Jesuítica",
-      image: "https://images.unsplash.com/photo-1590075865003-e48277faa558?auto=format&fit=crop&w=600&q=80" // Fachada colonial/barroca e institucional
+      image: TemploSanig 
     },
     { 
       name: "Museo Diocesano", 
       type: "Arte Sacro Jesuítico",
-      image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=600&q=80" // Arte/imaginería barroca detallada
+      image: MuseDiocesano
     },
     { 
       name: "Tañarandy", 
       type: "Tradición Cultural",
-      image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=600&q=80" // Misticismo nocturno cálido iluminado por fuego/velas
+      image: Taniarandy
     },
     { 
       name: "Plaza de Armas", 
