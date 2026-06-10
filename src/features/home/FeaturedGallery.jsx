@@ -2,6 +2,7 @@ import Section from '../../components/ui/Section'
 import TemploSanig from '../../assets/images/hero/iglesia-sanig-noche.webp'
 import MuseDiocesano from '../../assets/images/hero/museoDiocesano.png'
 import Taniarandy from '../../assets/images/tañarandy/fondoTaniarandy.jpeg'
+import PlazaSanRoque from '../../assets/images/plazas/plazaSanRoque.jpg'
 
 const FeaturedGallery = () => {
   const places = [
@@ -21,9 +22,9 @@ const FeaturedGallery = () => {
       image: Taniarandy
     },
     { 
-      name: "Plaza de Armas", 
+      name: "Plaza San Roque", 
       type: "Espacio Público",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" // Naturaleza, árboles centenarios y entorno verde
+      image: PlazaSanRoque
     }
   ]
 
