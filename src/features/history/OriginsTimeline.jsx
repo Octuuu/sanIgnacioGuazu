@@ -2,43 +2,56 @@ import Section from '../../components/ui/Section'
 
 const OriginsTimeline = () => {
   const events = [
-    { year: "1609", title: "Fundación", description: "San Roque González de Santa Cruz y el padre Marcial de Lorenzana fundan la reducción de San Ignacio Guazú, marcando el inicio de la era jesuítica." },
-    { year: "1767", title: "Expulsión de la Orden", description: "El rey Carlos III decreta la expulsión de los jesuitas de todos los dominios españoles, dejando las reducciones bajo administración secular." },
-    { year: "1993", title: "Patrimonio Histórico", description: "Se consolida el valor arquitectónico y cultural de sus tesoros artísticos y se ratifica su protección como patrimonio histórico del Paraguay." }
+    { 
+      year: "1609", 
+      title: "La Fundación del Origen", 
+      description: "El místico jesuita Marcial de Lorenzana y el célebre San Roque González de Santa Cruz fundan formalmente la reducción bajo la advocación de San Ignacio de Loyola. Al ser la primera en el territorio, recibió el apelativo guaraní de 'Guazú' (Grande), sirviendo como modelo urbano, social y legislativo para las veintinueve reducciones posteriores de la cuenca del Plata." 
+    },
+    { 
+      year: "1767", 
+      title: "El Ocaso de un Experimento Social", 
+      description: "El rey Carlos III firma la Pragmática Sanción decretando la expulsión fulminante de la Compañía de Jesús de todos los territorios de la corona española. Los padres jesuitas abandonan San Ignacio de la noche a la mañana. La administración secular toma el control, iniciando un periodo de decadencia material, saqueos de templos y dispersión de la población indígena hacia la selva." 
+    },
+    { 
+      year: "1993", 
+      title: "Rescate del Oro Teológico", 
+      description: "Tras siglos de olvido, se consolida la puesta en valor de los antiguos talleres jesuíticos sobrevivientes. Se inaugura de forma definitiva el Museo Diocesano de Arte Sacro en las estructuras originales de los bloques de indios de la reducción. El Estado paraguayo ratifica su protección absoluta, reconociendo a San Ignacio como la capital espiritual de la memoria barroca del país." 
+    }
   ]
 
   return (
-    <Section bgColor="stone" className="bg-stone-50 py-20 border-t border-b border-stone-100">
-      <div className="max-w-4xl mx-auto px-4">
+    <Section bgColor="stone" className="bg-stone-50 py-24 border-t border-b border-stone-200/60">
+      <div className="max-w-5xl mx-auto px-4">
         
-        {/* Cabecera */}
-        <div className="text-center mb-16">
-          <span className="text-xs font-semibold tracking-[0.2em] text-stone-500 uppercase block mb-3">
-            Hitos importantes
+        <div className="text-center mb-20">
+          <span className="text-xs font-semibold tracking-[0.25em] text-stone-500 uppercase block mb-3">
+            Hitos que forjaron nuestra identidad
           </span>
           <h2 className="text-3xl md:text-4xl font-serif text-stone-900 font-normal">
-            Línea de Tiempo
+            Línea del Tiempo Ignaciana
           </h2>
+          <div className="w-12 h-[1px] bg-stone-300 mx-auto mt-4" />
         </div>
 
-        {/* Contenedor de la línea */}
-        <div className="relative max-w-2xl mx-auto border-l border-stone-200 pl-6 md:pl-10 space-y-12">
+        <div className="relative max-w-3xl mx-auto border-l border-stone-200 pl-8 md:pl-16 space-y-16">
           {events.map((event, index) => (
             <div key={index} className="relative group">
               
-              {/* Círculo indicador de la línea (Efecto minimalista) */}
-              <div className="absolute -left-[31px] md:-left-[47px] top-1.5 w-3 h-3 rounded-full bg-white border border-amber-700 ring-4 ring-stone-50 group-hover:bg-amber-700 transition-colors duration-300" />
+              {/* Indicador geométrico minimalista */}
+              <div className="absolute -left-[39px] md:-left-[71px] top-2 w-4 h-4 rounded-full bg-white border-2 border-amber-800 ring-4 ring-stone-50 group-hover:bg-amber-800 transition-colors duration-300" />
               
-              {/* Contenido del evento */}
-              <div className="flex flex-col md:flex-row md:items-start gap-1 md:gap-6">
-                <span className="font-mono text-lg font-semibold text-amber-800 tracking-wider md:w-20 md:flex-shrink-0">
+              <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-10">
+                {/* Año */}
+                <span className="font-mono text-2xl font-normal text-amber-800 tracking-wider md:w-24 md:flex-shrink-0">
                   {event.year}
                 </span>
-                <div>
-                  <h3 className="font-serif text-lg text-stone-900 font-medium mb-1.5 tracking-wide">
+                
+                {/* Textos extensos */}
+                <div className="space-y-2">
+                  <h3 className="font-serif text-xl text-stone-900 font-normal tracking-wide">
                     {event.title}
                   </h3>
-                  <p className="text-stone-500 font-light text-sm leading-relaxed max-w-xl">
+                  <p className="text-stone-600 font-light text-sm md:text-base leading-relaxed text-justify">
                     {event.description}
                   </p>
                 </div>
