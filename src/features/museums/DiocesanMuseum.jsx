@@ -1,5 +1,18 @@
 import Section from '../../components/ui/Section'
 import { Clock, Ticket, CalendarDays } from 'lucide-react'
+import MuseoDiocesano from '../../assets/images/museos/museoDiocesano/museoDiocesano.png'
+import MuseoDiocesano1 from '../../assets/images/museos/museoDiocesano/museoDiocesano1.webp'
+import MuseoDiocesano2 from '../../assets/images/museos/museoDiocesano/museoDiocesano2.webp'
+import MuseoDiocesano3 from '../../assets/images/museos/museoDiocesano/museoDiocesano3.webp'
+import MuseoDiocesano4 from '../../assets/images/museos/museoDiocesano/museoDiocesano4.webp'
+import MuseoDiocesano5 from '../../assets/images/museos/museoDiocesano/museoDiocesano5.webp'
+import MuseoDiocesano6 from '../../assets/images/museos/museoDiocesano/museoDiocesano6.webp'
+import MuseoDiocesano7 from '../../assets/images/museos/museoDiocesano/museoDiocesano7.webp'
+import MuseoDiocesano8 from '../../assets/images/museos/museoDiocesano/museoDiocesano8.webp'
+import MuseoDiocesano9 from '../../assets/images/museos/museoDiocesano/museoDiocesano9.webp'
+import MuseoDiocesano10 from '../../assets/images/museos/museoDiocesano/museoDiocesano10.webp'
+import MuseoDiocesano11 from '../../assets/images/museos/museoDiocesano/museoDiocesano11.webp'
+
 
 const DiocesanMuseum = () => {
   return (
