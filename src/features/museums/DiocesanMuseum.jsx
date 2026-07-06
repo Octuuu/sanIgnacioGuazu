@@ -13,6 +13,22 @@ import MuseoDiocesano9 from '../../assets/images/museos/museoDiocesano/museoDioc
 import MuseoDiocesano10 from '../../assets/images/museos/museoDiocesano/museoDiocesano10.webp'
 import MuseoDiocesano11 from '../../assets/images/museos/museoDiocesano/museoDiocesano11.webp'
 
+// imagenes del museo municipal
+import MuseoMunicipal1 from '../../assets/images/museos/museo-municipal/museoMunicipal1.webp'
+import MuseoMunicipal2 from '../../assets/images/museos/museo-municipal/museoMunicipal2.webp'
+import MuseoMunicipal3 from '../../assets/images/museos/museo-municipal/museoMunicipal3.webp'
+import MuseoMunicipal from '../../assets/images/museos/museo-municipal/museoMunicipal4.webp'
+import MuseoMunicipal5 from '../../assets/images/museos/museo-municipal/museoMunicipal5.webp'
+import MuseoMunicipal6 from '../../assets/images/museos/museo-municipal/museoMunicipal6.webp'
+import MuseoMunicipal7 from '../../assets/images/museos/museo-municipal/museoMunicipal7.webp'
+import MuseoMunicipal8 from '../../assets/images/museos/museo-municipal/museoMunicipal8.webp'
+import MuseoMunicipal9 from '../../assets/images/museos/museo-municipal/museoMunicipal9.webp'
+import MuseoMunicipal10 from '../../assets/images/museos/museo-municipal/museoMunicipal10.webp'
+import MuseoMunicipal11 from '../../assets/images/museos/museo-municipal/museoMunicipal11.webp'
+import MuseoMunicipal12 from '../../assets/images/museos/museo-municipal/museoMunicipal12.webp'
+import MuseoMunicipal13 from '../../assets/images/museos/museo-municipal/museoMunicipal13.webp'
+import MuseoMunicipal14 from '../../assets/images/museos/museo-municipal/museoMunicipal14.webp'
+import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMunicipal15.webp'
 
 const DiocesanMuseum = () => {
   return (
