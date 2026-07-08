@@ -30,6 +30,14 @@ import MuseoMunicipal13 from '../../assets/images/museos/museo-municipal/museoMu
 import MuseoMunicipal14 from '../../assets/images/museos/museo-municipal/museoMunicipal14.webp'
 import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMunicipal15.webp'
 
+// imagenes del museo viedma
+
+import MuseoViedma1 from '../../assets/images/museos/MuseoViedma/muva1.jpg'
+import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMunicipal15.webp'
+import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMunicipal15.webp'
+import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMunicipal15.webp'
+import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMunicipal15.webp'
+
 const DiocesanMuseum = () => {
   return (
     <Section bgColor="stone" className="bg-stone-50/60 py-20 border-t border-b border-stone-100">
