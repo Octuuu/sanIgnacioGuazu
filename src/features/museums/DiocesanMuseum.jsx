@@ -33,10 +33,10 @@ import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMu
 // imagenes del museo viedma
 
 import MuseoViedma1 from '../../assets/images/museos/MuseoViedma/muva1.jpg'
-import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMunicipal15.webp'
-import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMunicipal15.webp'
-import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMunicipal15.webp'
-import MuseoMunicipal15 from '../../assets/images/museos/museo-municipal/museoMunicipal15.webp'
+import MuseoViedma2 from '../../assets/images/museos/MuseoViedma/muva2.jpeg'
+import MuseoViedma3 from '../../assets/images/museos/MuseoViedma/muva3.jpg'
+import MuseoViedma4 from '../../assets/images/museos/MuseoViedma/muva4.webp'
+import MuseoViedma5 from '../../assets/images/museos/MuseoViedma/muva5.jpg'
 
 const DiocesanMuseum = () => {
   return (
