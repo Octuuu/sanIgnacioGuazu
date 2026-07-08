@@ -1,28 +1,32 @@
+import React from 'react'
 import Section from '../../components/ui/Section'
 import DiocesanMuseum from './DiocesanMuseum'
+import MunicipalMuseum from './MunicipalMuseum'
+import ViedmaMuseum from './ViedmaMuseum'
 import CulturalPoints from './CulturalPoints'
 
 const MuseumsPage = () => {
   return (
-    <>
-      {/* Encabezado General */}
-      <Section bgColor="white" className="py-20 bg-white">
+    <div className="bg-stone-50 min-h-screen antialiased">
+      {/* Encabezado Editorial */}
+      <Section bgColor="white" className="py-28 bg-white border-b border-stone-100">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <span className="text-xs font-semibold tracking-[0.2em] text-amber-800 uppercase block mb-3">
-            Arte sacro y memoria viva
+          <span className="text-xs font-bold tracking-[0.3em] text-amber-800 uppercase block mb-4">
+            Arte Sacro, Arqueología y Memoria Viva
           </span>
-          <h1 className="text-4xl md:text-5xl font-serif text-stone-900 tracking-tight font-normal">
-            Museos y Espacios Culturales
+          <h1 className="text-4xl md:text-6xl font-serif text-stone-900 tracking-tight font-normal leading-none">
+            Museos y Espacios <br />Culturales
           </h1>
-          <div className="w-16 h-[1px] bg-amber-700/30 mx-auto mt-6" />
+          <div className="w-16 h-[1px] bg-amber-800/30 mx-auto mt-8" />
         </div>
       </Section>
       
-      {/* Secciones de Contenido */}
+      {/* Secuencia Curada de Contenidos */}
       <DiocesanMuseum />
-      
+      <MunicipalMuseum />
+      <ViedmaMuseum />
       <CulturalPoints />
-    </>
+    </div>
   )
 }
 
