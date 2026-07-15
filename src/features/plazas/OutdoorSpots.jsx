@@ -1,59 +1,51 @@
 import Section from '../../components/ui/Section'
-import { TreePine } from 'lucide-react'
 
 const OutdoorSpots = () => {
   const spots = [
     {
-      title: "Mirador del Cerro",
-      desc: "Espacio natural elevado ideal para contemplar atardeceres con una vista panorámica de la vegetación misionera."
+      title: "Senderos de la Reserva",
+      desc: "Perfecto para caminatas ecológicas y observación de avifauna nativa.",
+      tag: "Aventura"
     },
     {
-      title: "Senderos Ecológicos",
-      desc: "Circuitos naturales integrados para explorar la flora nativa y disfrutar de paseos bajo la sombra de lapachos."
+      title: "Paseo de las Flores",
+      desc: "Un sendero urbano decorado de forma estacional ideal para fotografías de retrato.",
+      tag: "Fotografía"
     },
     {
-      title: "Parque de la Reducción",
-      desc: "Un circuito ideal para caminatas al aire libre y descanso familiar rodeado de un entorno sereno y verde."
+      title: "Ciclovía Municipal",
+      desc: "Circuito pavimentado y seguro para recorrer de punta a punta en bicicleta o rollers.",
+      tag: "Deportes"
     }
   ]
 
   return (
-    <Section bgColor="white" className="py-20 bg-white">
-      <div className="max-w-5xl mx-auto px-4">
-        
-        {/* Cabecera */}
-        <div className="text-center mb-14">
-          <span className="text-xs font-semibold tracking-[0.2em] text-stone-400 uppercase block mb-3">
-            Naturaleza y recreación
+    <Section bgColor="white" className="py-20 bg-stone-900 text-stone-100">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center max-w-xl mx-auto mb-16">
+          <span className="text-xs font-semibold tracking-widest text-amber-500 uppercase block mb-3">
+            Otras Alternativas
           </span>
-          <h2 className="text-3xl font-serif text-stone-900 font-normal">
-            Espacios al Aire Libre
-          </h2>
-          <div className="w-12 h-[1px] bg-stone-200 mx-auto mt-4" />
+          <h2 className="text-3xl font-serif text-white">Explora el Aire Libre</h2>
+          <p className="text-stone-400 mt-2 text-sm">
+            Además de nuestras plazas principales, descubre otros espacios diseñados para conectar con el entorno y mantenerte en movimiento.
+          </p>
         </div>
 
-        {/* Grid de Tarjetas Minimalistas */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {spots.map((spot, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {spots.map((spot, idx) => (
             <div 
-              key={index} 
-              className="bg-stone-50/50 border border-stone-200/40 rounded-2xl p-6 flex flex-col justify-between transition-colors duration-300 hover:bg-stone-50"
+              key={idx} 
+              className="border border-stone-800 p-8 rounded-lg bg-stone-900/50 hover:border-amber-700/50 transition-colors"
             >
-              <div>
-                <div className="text-amber-800/80 mb-3">
-                  <TreePine className="h-5 w-5" />
-                </div>
-                <h3 className="font-serif text-lg text-stone-900 font-normal mb-2 tracking-wide">
-                  {spot.title}
-                </h3>
-                <p className="text-stone-500 font-light text-sm leading-relaxed">
-                  {spot.desc}
-                </p>
-              </div>
+              <span className="text-xs font-mono text-amber-500 tracking-wider uppercase">
+                {spot.tag}
+              </span>
+              <h3 className="text-xl font-serif text-white mt-2 mb-3">{spot.title}</h3>
+              <p className="text-stone-400 text-sm leading-relaxed">{spot.desc}</p>
             </div>
           ))}
         </div>
-
       </div>
     </Section>
   )
