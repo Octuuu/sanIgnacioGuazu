@@ -2,7 +2,7 @@ import Section from '../../components/ui/Section'
 import TemploSanig from '../../assets/images/hero/iglesia-sanig-noche.webp'
 import MuseDiocesano from '../../assets/images/hero/museoDiocesano.png'
 import Taniarandy from '../../assets/images/tañarandy/fondoTaniarandy.jpeg'
-import PlazaSanRoque from '../../assets/images/plazas/plazaSanRoque.jpg'
+import PlazaSanRoque from '../../assets/images/plazas/plazaSanRoque/plazaSanRoque.jpg'
 
 const FeaturedGallery = () => {
   const places = [
