@@ -1,96 +1,161 @@
-import { useState, useEffect } from "react";
-import { Link, NavLink, useLocation } from 'react-router-dom'
-import { Menu, X, Church } from 'lucide-react'
+import { useState, useEffect } from "react"
+import { Link, NavLink, useLocation } from "react-router-dom"
+import { Menu, X, Church } from "lucide-react"
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false)
-    const location = useLocation()
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const location = useLocation()
 
-    const navItems = [
-        { path: '/', label: 'Inicio' },
-        { path: '/historia', label: 'Historia y Cultura' },
-        { path: '/tañarandy', label: 'Tañarandy' },
-        { path: '/museos', label: 'Museos' },
-        { path: '/plazas', label: 'Plazas' },
-        { path: '/gastronomia', label: 'Dónde Comer' },
-        { path: '/mapa', label: 'Mapa' },
-    ]
+  const navItems = [
+    { path: "/", label: "Inicio" },
+    { path: "/historia", label: "Historia y Cultura" },
+    { path: "/tañarandy", label: "Tañarandy" },
+    { path: "/museos", label: "Museos" },
+    { path: "/plazas", label: "Plazas" },
+    { path: "/gastronomia", label: "Dónde Comer" },
+    { path: "/mapa", label: "Mapa" },
+  ]
 
-    useEffect(() => {
-        setIsOpen(false)
-    }, [location])
+  // Cerrar menú móvil al cambiar de ruta
+  useEffect(() => {
+    setIsOpen(false)
+  }, [location])
 
-    return (
-        <nav className="bg-white/80 backdrop-blur-md border-b border-stone-100 sticky top-0 z-50 transition-all duration-300 select-none"> 
-            <div className="container-custom relative">
-                <div className="flex justify-between items-center h-16 px-4 md:px-6">
-                    
-                    {/* Logo / Marca */}
-                    <Link 
-                        to="/" 
-                        className="flex items-center space-x-2.5 group focus:outline-none focus:ring-0 focus-visible:outline-none active:outline-none [-webkit-tap-highlight-color:transparent]"
-                    >
-                        <Church className="h-6 w-6 text-amber-800 transition-colors duration-300 group-hover:text-amber-600"/>  
-                        <span className="font-semibold text-lg tracking-tight text-stone-900 transition-colors duration-300 group-hover:text-stone-600">
-                            San Ignacio Guazú
-                        </span>                
-                    </Link>
+  // Bloquear scroll del body cuando el menú móvil está abierto
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "unset"
+    }
+    return () => {
+      document.body.style.overflow = "unset"
+    }
+  }, [isOpen])
 
-                    {/* Menú de escritorio */}
-                    <div className="hidden md:flex space-x-1">
-                        {navItems.map((item) => (
-                            <NavLink
-                                key={item.path}
-                                to={item.path}
-                                className={({ isActive }) =>
-                                    `px-3.5 py-2 rounded-full text-xs lg:text-sm font-medium tracking-wide transition-all duration-300 outline-none focus:outline-none focus:ring-0 focus-visible:outline-none active:outline-none [-webkit-tap-highlight-color:transparent] ${
-                                        isActive
-                                        ? 'bg-amber-50 text-amber-900 border border-amber-200/50'
-                                        : 'text-stone-600 hover:text-stone-950 hover:bg-stone-50 border border-transparent'
-                                    }`
-                                }
-                            >
-                                {item.label}
-                            </NavLink>
-                        ))}
-                    </div>
+  // Detectar scroll para cambiar el estilo del navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
-                    {/* Botón menú móvil */}
-                    <button 
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="md:hidden p-2 rounded-full text-stone-600 hover:bg-stone-100 hover:text-stone-900 transition-colors outline-none focus:outline-none focus:ring-0 focus-visible:outline-none active:outline-none [-webkit-tap-highlight-color:transparent]"
-                    >
-                        {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                    </button>
-                </div>
+  return (
+    <>
+      <nav
+        className={`sticky top-0 z-50 w-full select-none transition-all duration-500 ${
+          isScrolled
+            ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-stone-100 py-3"
+            : "bg-white/40 backdrop-blur-sm border-b border-transparent py-5"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center">
+            
+            {/* Logo / Marca */}
+            <Link
+              to="/"
+              className="flex items-center space-x-3 group focus:outline-none [-webkit-tap-highlight-color:transparent]"
+            >
+              <div className="p-2 rounded-xl bg-stone-900/5 group-hover:bg-amber-900/10 transition-colors duration-300">
+                <Church className="h-5 w-5 text-amber-800 transition-colors duration-300 group-hover:text-amber-700" />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-serif text-lg md:text-xl font-normal tracking-tight text-stone-900 transition-colors duration-300 group-hover:text-amber-900">
+                  San Ignacio Guazú
+                </span>
+                <span className="text-[10px] tracking-[0.2em] uppercase font-semibold text-stone-400 group-hover:text-amber-800 transition-colors duration-300 -mt-1">
+                  Misiones · Paraguay
+                </span>
+              </div>
+            </Link>
 
-                {/* Menú móvil */}
-                <div 
-                    className={`absolute top-16 left-0 right-0 md:hidden border-b border-stone-100 bg-white/95 backdrop-blur-lg px-4 py-3 space-y-1 shadow-md transition-all duration-300 ease-in-out ${
-                        isOpen 
-                        ? 'opacity-100 translate-y-0 pointer-events-auto' 
-                        : 'opacity-0 -translate-y-2 pointer-events-none'
-                    }`}
+            {/* Menú de escritorio */}
+            <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `relative px-3 py-2 rounded-lg text-xs lg:text-sm font-medium tracking-wide transition-all duration-300 outline-none [-webkit-tap-highlight-color:transparent] ${
+                      isActive
+                        ? "text-amber-900 bg-amber-50/60 font-semibold"
+                        : "text-stone-600 hover:text-stone-950 hover:bg-stone-50"
+                    }`
+                  }
                 >
-                    {navItems.map((item) => (
-                        <NavLink
-                            key={item.path}
-                            to={item.path}
-                            className={({ isActive }) => 
-                                `block px-4 py-2.5 rounded-xl text-sm font-medium transition-colors duration-200 outline-none focus:outline-none focus:ring-0 focus-visible:outline-none active:outline-none [-webkit-tap-highlight-color:transparent] ${
-                                    isActive
-                                    ? 'bg-amber-50 text-amber-900 border-l-4 border-amber-700 font-semibold'
-                                    : 'text-stone-600 hover:bg-stone-50 hover:text-stone-900'
-                                }`
-                            }
-                        >
-                            {item.label}
-                        </NavLink>
-                    ))}
-                </div>
+                  {({ isActive }) => (
+                    <>
+                      <span>{item.label}</span>
+                      {/* Línea decorativa inferior sutil en activo */}
+                      {isActive && (
+                        <span className="absolute bottom-1 left-3 right-3 h-[2px] bg-amber-800/80 rounded-full" />
+                      )}
+                    </>
+                  )}
+                </NavLink>
+              ))}
             </div>
-        </nav>
-    )
+
+            {/* Botón menú móvil */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Abrir menú"
+              className="md:hidden p-2.5 rounded-xl text-stone-700 bg-stone-50 border border-stone-100 hover:bg-stone-100 active:scale-95 transition-all outline-none [-webkit-tap-highlight-color:transparent]"
+            >
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Menú móvil (Pantalla Completa / Drawer Superior) */}
+      <div
+        className={`fixed inset-0 z-40 bg-stone-950/40 backdrop-blur-sm md:hidden transition-opacity duration-300 ${
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsOpen(false)}
+      >
+        <div
+          className={`absolute top-0 left-0 right-0 bg-white border-b border-stone-200 px-6 pt-24 pb-10 shadow-2xl rounded-b-3xl transition-transform duration-500 ease-out ${
+            isOpen ? "translate-y-0" : "-translate-y-full"
+          }`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex flex-col space-y-2">
+            <span className="text-[10px] tracking-[0.25em] font-bold text-amber-800 uppercase mb-4 border-b border-stone-100 pb-2">
+              Navegación
+            </span>
+            {navItems.map((item, index) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                style={{ transitionDelay: `${index * 40}ms` }}
+                className={({ isActive }) =>
+                  `block px-4 py-3.5 rounded-2xl text-base font-medium transition-all duration-300 transform [-webkit-tap-highlight-color:transparent] ${
+                    isOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
+                  } ${
+                    isActive
+                      ? "bg-amber-50 text-amber-900 border-l-4 border-amber-800 pl-5 font-semibold"
+                      : "text-stone-700 hover:bg-stone-50 hover:text-stone-900 pl-4"
+                  }`
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
 
 export default Navbar
